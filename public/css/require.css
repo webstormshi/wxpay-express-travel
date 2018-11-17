@@ -1,0 +1,70 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.contain{
+	width: 100%;
+	min-height: 100vh;
+}
+.require-item{
+	padding: 0.3rem;
+}
+.require-item .require-title{
+	font-size: .4rem;
+	color: #666;
+}
+.choose-list{
+	
+}
+.choose-item{
+	display: inline-block;
+	width: 30%;
+	margin: .3rem  1%;
+	padding: .3rem 0;
+	font-size: .4rem;
+	color: #999;
+	background: #eee;
+	text-align: center;
+}
+.select{
+	background-color: rgba(62,146,222,0.8);
+	color: #FFFBE0;
+}
+.require-cell{
+	display: flex;
+	margin: 0.3rem 0;
+	border-bottom: 1px solid #EEEEEE;
+}
+.require-cell label{
+	width: 30%;
+	font-size: 0.4rem;
+	color: #999999;
+}
+.require-cell input{
+	width: 60%;
+	height: 0.7rem;
+	padding: 0 0.5rem;
+	border: none;
+	font-size: 0.45rem;
+}
+.fixed-action{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+.fixed-action .require-desc{
+	background: rgba(142,210,247,.3);
+	color: #999999;
+	text-align: center;
+	padding: 0.15rem 0;
+}
+.fixed-action .submit-btn{
+	text-align: center;
+	background: rgba(142,210,247,.9);
+	font-size: .45rem;
+	padding: 0.2rem 0;
+	color: #FFFBE0;
+}
+

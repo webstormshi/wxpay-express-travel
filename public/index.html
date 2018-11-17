@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/flexible_css.debug.js"></script>
+    <script src="./js/flexible.debug.js"></script>
+    <script src="./js/jquery-3.1.0.min.js"></script>
+    <script src="./js/index.js?v2.180320"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>中国云南—印象云南</title>
+</head>
+<body onload="init()">
+    <div class="container">
+
+        <!--头部标题图片-->
+        <header class="avatar">
+        			<h1 class="poster">“私人定制”旅游<br/><span>666元</span>提前预定优惠更多</h1>
+                <h2 class="desc">旅游优惠券仅售 <span class="yellow">666</span>元，体检价值<span class="yellow">4200</span>元的风景名胜</h2>
+        </header>
+
+        <!--form表单-->
+        <div class="form">
+            <div class="user_form">
+                <header class="title">
+                <div class="title-logo">个人定制</div>
+                </header>
+                <div class="address">
+                    <select name="province" class="input addr_input" id="param_province" onchange="provincechange(this.selectedIndex)"><option>出发地</option></select>
+                      <img src="images/exchange.png" class="exchange-icon"/>
+                    <select name="province" class="input addr_input" id="param_province" onchange="provincechange(this.selectedIndex)"><option>出发地</option></select>
+                </div>
+                <div class="address">
+                    <input name="province" class="input addr_input" id="param_province" onchange="provincechange(this.selectedIndex)" placeholder="出发日期"  type="date"/>
+                    <img src="images/exchange.png" class="exchange-icon"/>
+                    <input name="province" class="input addr_input" id="param_province" onchange="provincechange(this.selectedIndex)" placeholder="返程日期"  type="date"/>
+                </div>
+               	<div class="address">
+                      <div class="label-name">出行人数:</div>
+                    <select name="city" class="input addr_input" id="param_city" style="width: 32%;"><option> 成人数</option></select>  
+                    <select name="city" class="input addr_input" id="param_city" style="width: 32%;"><option>儿童数</option></select>  
+                </div>
+                <div class="address">
+                      <div class="label-name">人均预算:</div>
+                    <select name="city" class="input addr_input" id="param_city" style="width: 70%;"><option> 成人数</option></select>  
+                </div>
+                <input type="submit" class="submit" onclick="submit()" value="开始定制" />
+            </div>
+        </div>
+
+        <!--活动规则-->
+        <div class="content">
+            <header class="title">
+                <div class="title-logo">定制规则介绍</div>
+            </header>
+            <div class="content-rule">
+                <p class="item">一．本次活动名额可以转让、赠与，但不得退换现金、物品。截止日期以旅游卡上标注的时间为准。</p>
+                <p class="item">二．本次活动适用于年龄在30至54岁之间、身体健康、具有完全民事责任能力的中国公民。此卡双人使用，但是年龄太大或者太小的游客需要由一个30至54岁的亲友陪同使用，男女比例是1：1或者双女，且单男或全男都不安排，有心脏病及严重高血压者不能参加此次活动，2~13岁小孩报名参考费用为2360-3000元，（以实际的机票价格为准）因为小孩既出不了团体票也出不了婴儿票。</p>
+                <p class="item">三．因公司内部的地域保护限制，本次活动的参团人员仅适用于出发地当地省份的户籍所在地的客户使用（如武汉出发的客户必须为湖北户籍，杭州出发的客户必须为浙江户籍）如本次活动的参团人员并非出发地当地省份户籍，参团人员需提供具有出发地户籍身份的成年人提供的结婚证拍照、房产证明拍照或旅行社要求的其他证明文件。目前可用出发地有湖北、湖南、北京、河北、上海、山东、浙江、江苏、河南、安徽、山西、陕西、江西、天津。</p>
+                <p class="item">四. 报名请提前7~10天联系贵宾券上的联系电话或者微信号预约报名，报名时请提供参团人员姓名、身份证号、手机号、参团日期。如遇不可抗因素（如天气、自然灾害、国家政策性调价等）导致行程延误、变更、终止等，我社不承担由此产生的费用。</p>
+                <p class="item">五．参加本次活动的游客必须全程随团活动，不得中途擅自离团，如因游客原因擅自离团产生的所有损失由游客承担。</p>
+                <p class="item">如遇节假日、黄金周、旅游旺季需补机票差价，以实际机票价格为准。</p>
+            </div>
+        </div>
+    </div>
+<script src="./js/select.js"></script>
+</body>
+</html>

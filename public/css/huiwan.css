@@ -1,0 +1,182 @@
+.container{
+    background: #fff;
+}
+.avatar{
+    width: 100%;
+    height: 7.58133rem;
+    background: url('../images/huiwan/avatar.png');
+    background-size: 100% 100%;
+}
+.place{
+    height: 9rem;
+    margin-top: 0.2667rem;
+    text-align: center;
+}
+.title{
+    height: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    background: url('../images/huiwan/title-bg.png');
+    background-size: 100% 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #073182;
+    font-size: 0.5rem;
+    font-weight: 800;
+    font-style: italic;
+    margin-bottom: 0.1333rem;
+}
+.place-show{
+    width: 85%;
+    height: 2.3rem;
+    margin: 0.0667rem auto;
+}
+.rounter{
+    text-align: center;
+}
+.rounter-show{
+    width: 90%;
+    height: 5.5rem;
+}
+.product{
+    text-align: center;
+    margin-top: 0.3rem;
+}
+.product-flex{
+    width: 90%;
+    margin: 0.0533rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.prod-flex{
+    width: 49%;
+    height: 100%;
+}
+.food{
+    width: 90%;
+    height: 2.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0.1333rem auto;
+}
+.food-item{
+    width: 2.8rem;
+    height: 100%;
+}
+.route{
+    text-align: center;
+    margin-top: 0.4rem;
+}
+.day-item{
+    width: 85%;
+    margin: 1rem auto;
+    border: 0.0467rem dotted #feda07;
+    border-radius: 0.1333rem;
+    position: relative;
+    background: #fffcec;
+}
+.day-title{
+    width: 3rem;
+    height: 1.1rem;
+    position: absolute;
+    top: -0.5rem;
+    left: -0.5rem;
+    border-top-left-radius: 0.6rem;
+    border-bottom-left-radius: 0.6rem;
+    background: #feda07;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.number{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin: 0.0267rem;
+    background: #033181;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #fff;
+    font-size: 0.5rem;
+}
+.label{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #033181;
+    font-size: 0.5rem;
+    font-style: bold;
+    margin-left: 0.1rem;
+}
+.day-item .content{
+    padding: 0.8rem 0.25rem 0.25rem 0.25rem;
+    text-align: left;
+    font-size: 0.35rem;
+    line-height: 0.5rem;
+    color: #7eaeee;
+}
+.attention{
+    width: 90%;
+    margin: 0 auto;
+}
+.label-title{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 0.5rem;
+    color: #166ef3;
+    margin-top: 0.2rem;
+}
+.star-icon{
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-left: 0.1333rem;
+    margin-right: 0.2rem;
+}
+.paragrah{
+    padding: 0.2rem;
+    color: #8c8c8c;
+    font-size: 0.35rem;
+    line-height: 0.5rem;
+}
+
+.important{
+    color: #fe2d32;
+    font-weight: 800;
+}

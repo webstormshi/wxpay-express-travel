@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-3.1.0.min.js"></script>
+    <script src="./js/flexible_css.debug.js"></script>
+    <script src="./js/flexible.debug.js"></script>
+    <link rel="stylesheet" href="./css/register.css">
+    <title>江西绿地观光中心303观光厅</title>
+</head>
+<body>
+    <div class="tower">
+         <!--头部标题图片-->
+        <header class="avatar">
+        			<h1 class="poster">“私人定制”旅游<br/><span>666元</span>提前预定优惠更多</h1>
+                <h2 class="desc">旅游优惠券仅售 <span class="yellow">666</span>元，体检价值<span class="yellow">4200</span>元的风景名胜</h2>
+        </header>
+
+        <div class="tower-bd">
+            <div class="tower-bd__item">
+                <header class="tower-bd__title">会员专享</header>
+                <p class="tower-bd__content">
+                    <strong>开放时间：</strong>10:00-21:30（21:00停止售票）<br/>
+                    <strong>取票方式：</strong>用户提交姓名和手机号码,付款成功后商家下发短信，请游客游客凭乐乐酷短信到售票处前台报电话姓名取票。<br/>
+                    <strong>景点地址：</strong>江西省南昌市红谷滩红谷中大道998号绿地双子塔A1-负一层观光厅。
+                </p>
+            </div>
+        </div>
+        <div class="tower-foot">
+                <div class="tower-ft__form">
+                    <div action="" class="ticket-form">
+                        <h2 class="tower-ft__from-title">一元会员购买</h2>
+                        <input type="text" placeholder="姓名" id="name" class="name"/>
+                        <input type="number" placeholder="手机号" id="mobile" />
+                        <div id="add_box">
+                            <!-- <input type="text" placeholder="请输入成员姓名" class="name" />  -->
+                        </div>
+                        <div class="tower-ft__action">
+                            <p class="price-info">￥<span class="price">1.0</span>元<span class="origion-price">￥9.9</span></p>
+                            <div id="submitBtn" onclick="order()">微信支付</div>
+                        </div>
+                        <p class="desc">
+                            原价9.9元，现价1.0元<br/>
+                            注册会员可享受更多旅游惊喜礼包
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script>
+    // Date.prototype.toDateInputValue = (function() {
+    //     var local = new Date(this);
+    //     local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+    //     return local.toJSON().slice(0,10);
+    // });
+    var cid = '';
+    var settings = {
+        baseURL: 'https://market.qinglong365.com',
+        pversion: 'v1.0',
+        productid: '1001',
+        price: 39.9,
+        orgin_price: 80
+    };
+    // 手机号正则验证
+    var r=/^1([358][0-9]|4[579]|66|7[0135678]|9[89])[0-9]{8}$/;
+    (function(){
+            cid = getParam('cid')||0;
+            record();
+            // $('#dateTime').val(new Date().toDateInputValue());
+    }());
+
+    // 填写完人数生成人名
+    function getNumberInput(obj){
+        $('#add_box').children().remove('.name');
+        var number = $(obj).val(); 
+        if(number>1){
+            var item = `<input type="text" placeholder="同行游客姓名" class="name" />`; 
+            for (let i = 0; i < number-1; i++) {
+                $('#add_box').append(item);   
+            }
+        }
+        $($('.price')[0]).text((settings.price*number).toFixed(1));
+        $($('.origion-price')[0]).text((settings.orgin_price*number).toFixed(1));
+    }
+
+    // 记录用户进入页面访问
+    function record(){
+        var url = settings.baseURL + '/v1/GET/payLog';
+        var params = {
+            url: url,
+            cid: cid,
+            pversion: settings.pversion,
+            product_id: settings.productid
+        };
+        $.ajax({
+            url: url,
+            method: 'GET',
+            data: params,
+            header: {
+                "Content-Type": "application/json"
+            },
+            success: function(res){
+                console.log(res);
+            }
+        });
+    }
+
+    // 用户支付创建订单
+    function order(){
+        var nameStr = '';
+        var list = $('.name');
+       for (let i = 0; i < list.length; i++) {
+            nameStr += $(list[i]).val() + ',';
+       }
+       var name = nameStr.slice(0,nameStr.length-1);
+        var mobile = $('#mobile').val();
+        var price = $($('.price')[0]).text()*100;
+        var number = $('#number').val();
+        var date = $('#dateTime').val();
+        console.log(name,mobile,price,number,date);
+        if(!date){
+            alert('请选择旅游时间');
+            return;
+        }
+        if(!name || !mobile){
+            alert('姓名或手机号为空');
+            return;
+        }
+
+        if(!r.test(mobile)){
+            alert('手机号格式错误');
+            return;
+        };
+
+        var url = settings.baseURL + '/v1/POST/order/add';
+        var params = {
+            cid: cid,
+            uname: name,
+            phone: mobile,
+            pversion: settings.pversion,
+            money: price,
+            bill_type: '1',
+            product_id: settings.productid,
+            travel_date: date,
+            num: number || 1,
+            app_type: getAppType()
+        }
+        $.ajax({
+            url: url,
+            method: 'POST',
+            data: params,
+            header: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            // dataType: "json",
+            success: function(res){
+                if(res.status==-1){
+                    alert(res.msg);
+                    return;
+                }
+                location.href = res.data;
+                reset();
+                click = true;
+            },
+            error: function(err){
+                console.log(err);
+                alert('报名失败',err); 
+            }
+        });
+    }
+
+    // 重置表单
+    function reset(){
+        var list = $('input');
+        for (let i = 0; i < list.length; i++) {
+            $(list[i]).val('');
+        }
+    }
+
+    //截取url数据方法
+    function getParam(name){
+        var search = document.location.search;
+        var pattern = new RegExp("[?&]" + name + "\=([^&]+)", "g");
+        var matcher = pattern.exec(search);
+        var items = null;
+        if (null != matcher) {
+            try {
+                items = decodeURIComponent(decodeURIComponent(matcher[1]));
+            } catch (e) {
+                try {
+                    items = decodeURIComponent(matcher[1]);
+                } catch (e) {
+                    items = matcher[1];
+                }
+            }
+        }
+        return items;
+    };
+
+    function getAppType(){
+        if(IsPC()){
+           return 0; 
+        }else{
+            if(is_weixin()){
+                return 2;
+            }else{
+                return 1;
+            }
+        }
+    }
+    //如果返回true 则说明是Android
+    function is_weixin() {
+        var u = navigator.userAgent, app = navigator.appVersion;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+        var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        if (isAndroid) {
+        //这个是安卓操作系统
+        return true;
+        }
+        if (isIOS) {
+    　　　　//这个是ios操作系统
+            return false;
+        }
+    }
+
+    //如果返回的是false说明当前操作系统是手机端，如果返回的是true则说明当前的操作系统是电脑端
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+            "SymbianOS", "Windows Phone",
+            "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    </script>
+</body>
+</html>

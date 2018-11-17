@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-3.1.0.min.js"></script>
+    <script src="./js/flexible_css.debug.js"></script>
+    <script src="./js/flexible.debug.js"></script>
+    <!--<link rel="stylesheet" href="./css/index.css">-->
+    <title>一元会员——订单详情</title>
+    <style type="text/css">
+    	.container{
+    width: 100%;
+    min-height: 100vh;
+    color: #f4f4f4;
+    box-sizing: border-box;
+    padding-top: 0.2rem;
+    overflow: hidden;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #000;
+    font-weight: 800;
+    line-height: 1.8rem;
+    background: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.head img{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.2rem;
+}
+.content{
+    height: 11rem;
+    width: 95%;
+    margin: 0.5rem auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    background: url('./images/order_bg.png');
+    background-size: 100% 100%;
+    color: #000;
+}
+.avatar-box{
+	text-align: center;
+	
+}
+.avatar-box img{
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 1.3rem;
+	border: 1px solid #EEEEEE;
+	margin: .2rem auto;
+}
+.username{
+	color: #2683FD;
+	font-size: .5rem;
+	font-style: initial;
+}
+.title{
+    height: 1.5rem;
+    line-height: 1.6rem;
+    font-size: 0.6rem;
+    font-weight: 800;
+    margin-left: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+.item{
+    height: 0.7rem;
+    line-height: 0.7rem;
+    font-size: 0.40rem;
+    margin-left: 0.5rem;
+    color: #333;
+}
+.item span{
+    margin-left: 0.3rem;
+    font-weight: 600;
+}
+.line{
+    border-bottom: 1px dashed #eee;
+    margin-top: 0.2rem;
+}
+.ticket{
+    width: 80%;
+    border-radius: 0.1rem;
+    background: #2683FD;
+    margin: 1rem auto;
+    padding: 0.2rem;
+    font-size: 0.5rem;
+    color: #FFFBE0;
+    letter-spacing: 0.02rem;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="head">
+            <img src="./images/success.png" id="icon"><span id="status">支付成功</span>
+        </header>
+        <div class="content">
+            <h1 class="title">您的一元会员已经开通</h1>
+            <div class="avatar-box">
+            	            <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3056427933,505235708&fm=27&gp=0.jpg" alt="" class="avatar" />
+            	            <p class="username">怒放的生命</p>
+            </div>
+            
+            <p class="item">订单时间:<span id="tTime">2018-06-18 12:30:59</span></p>
+            <p class="item">订单状态:<span id="pay_status">已支付</span></p>
+            <p class="item">姓名:<span id="uName">石 勇</span></p>
+            <div class="line"></div>
+            <div class="ticket">
+                返回首页
+            </div>
+        </div>
+        <div class="confirm-btn">确认</div>
+    </div>
+<script>
+    var orderid = '';
+    var count = 0;
+    (function(){
+        order_id = getParam('order_id')|| 'D201804251524670642213058';
+        var timer = setInterval(function(){
+            getOrder(function(res){
+                setData(res.data[0]);
+                if(res.data[0].pay_status==2||count>4){
+                    clearInterval(timer);
+                }else if(res.data[0].pay_status==1&&count==4){
+                    $('#status').text('未支付').css('color',red);
+                    $('#pay_status').text('未支付').css('color',red);
+                    $('#icon').attr('src','./image/fail.png');
+                    clearInterval(timer);
+                }
+                count++;
+            });
+        },1000);
+    }());
+
+    function getOrder(callback){
+        var url = 'https://market.qinglong365.com/v1/GET/order/list';
+        var params = {
+            order_id: order_id
+        };
+        $.ajax({
+            url: url,
+            method: 'GET',
+            data: params,
+            header: {
+                "Content-Type": "application/json"
+            },
+            success: callback
+        })
+    }
+
+    function setData(data){
+        $('#ticket').text(data.order_id);
+        $('#tTime').text(data.tTime.slice(0,10));
+        $('#uName').text(data.uName);
+        $('#phone').text(data.phone);
+        if(data.pay_status==1){
+            $('#status').text('请稍后...');
+            $('#pay_status').text('请稍后...');
+        }else{
+            $('#pay_status').text('已支付');
+        }
+    }
+
+    //截取url数据方法
+    function getParam(name){
+        var search = document.location.search;
+        var pattern = new RegExp("[?&]" + name + "\=([^&]+)", "g");
+        var matcher = pattern.exec(search);
+        var items = null;
+        if (null != matcher) {
+            try {
+                items = decodeURIComponent(decodeURIComponent(matcher[1]));
+            } catch (e) {
+                try {
+                    items = decodeURIComponent(matcher[1]);
+                } catch (e) {
+                    items = matcher[1];
+                }
+            }
+        }
+        return items;
+    };
+</script>
+</body>
+</html>

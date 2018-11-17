@@ -1,0 +1,157 @@
+.container{
+    background: #fff;
+}
+.spcial{
+    padding:0.1333rem;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+.avatar{
+    width: 100%;
+    height: 7.58133rem;
+    background: url('../images/daixiang/avatar.png');
+    background-size: 100% 100%;
+}
+.title{
+    height: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    background: url('../images/daixiang/title.png');
+    background-size: 100% 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #2683fd;
+    font-size: 0.6rem;
+    font-weight: 800;
+    font-style: italic;
+    margin-bottom: 0.1333rem;
+}
+.cricle,.rounte,.product,.notice{
+    width: 90%;
+    margin: 0.1333rem auto;
+}
+.rounte-img{
+    width: 80%;
+    margin: 0.1333rem 0.4667rem;
+}
+.product1-item{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.product1-item .prod-img{
+    width: 50%;
+    height: 2.8rem;
+}
+.product1-item .prod-info{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 0.3033rem;
+    color: #999;
+    font-size: 0.3rem;
+    line-height: 0.45rem;
+}
+.product1-item .prod-name{
+    color: #2683fd;
+    margin: 0.267rem 0.06rem;
+    font-size: 0.6rem;
+    font-style: italic;
+}
+.reverse{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+}
+ .reverse .prod-info{
+     text-align: right;
+     margin-right: 0.3033rem;
+ }
+ .route-detail{
+     text-align: center;
+ }
+ .route-content{
+    width: 80%;
+    margin: 0.1333rem auto;
+    border-left: 0.0133rem dotted #2683fd;
+ }
+ .route-content .item{
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+ }
+ .route-content .item .number{
+     display: inline-block;
+     width: 0.8rem;
+     height: 0.8rem;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+     margin-left: -0.2rem;
+     margin-right: 0.1333rem;
+     background: #ffce08;
+     color: #fff;
+     font-size: 0.6rem;
+ }
+ .route-content .item .name{
+     color: #2683fd;
+     font-size: 0.5rem;
+     font-weight: 800;
+ }
+  .route-content .intro{
+      padding: 0.2333rem 0rem 0.3667rem 0.3667rem;
+      text-align: left;
+      color: #999;
+      font-size: 0.4rem;
+  }
+  .import{
+      color: #2683fd;
+      font-weight: 800;
+  }
+  .notice .label{
+      border-left: 0.1rem solid #fecf08;
+      padding: 0 0.1rem;
+      color: #54b1fe;
+      font-size: 0.5rem;
+      margin: 0.333rem 0.2667rem;
+  }
+   .notice .item{
+       width: 85%;
+       margin: 0 auto;
+       color: #999;
+       font-size: 0.4rem;
+       line-height: 0.55rem;
+   }
+   .ft-img{
+       height: 0.3rem;
+       background: url('../images/daixiang/footer.png');
+       background-size: 100% 100%;
+   }

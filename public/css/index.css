@@ -1,0 +1,131 @@
+.container{
+    background: #fff;
+}
+.avatar{
+    width: 100%;
+    height: 5.8133rem;
+    background: url('https://dimg14.c-ctrip.com/images/100k0g0000007qkp5F0C3_C_500_280.jpg');
+    background-size: 100% 100%;
+    text-align: center;
+}
+.form{
+    width: 90%;
+    margin: 1.5rem auto;
+    margin-top: -1rem;
+    text-align: center;
+    border-radius: 0.0667rem;
+    -webkit-box-shadow: 0rem 0rem 0.2667rem cadetblue;
+            box-shadow: 0rem 0rem 0.2667rem cadetblue;
+    background: #fff;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding-bottom: 0.5rem;
+}
+.user_form .input{
+    width: 80%;
+    height: 1rem;
+    margin-top: 0.2333rem;
+    background: #ecfafe;
+    outline: none;
+    list-style: none;
+    border: 0;
+    padding: 0.0667rem 0.1333rem;
+    font-size: 0.4133rem;
+    border-radius: 0.0667rem;
+    color: #3293fe;
+}
+.user_form .address{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+            align-items: center;
+    width: 83%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0.2rem auto;
+}
+.user_form .addr_input{
+    width: 45%;
+}
+.submit{
+    width: 85%;
+    height: 1rem;
+    margin-top: 0.3333rem;
+    outline: none;
+    list-style: none;
+    border: 0;
+    border-radius: 0.0667rem;
+    background: #3293fe;
+    color: #fff;
+    font-size: 0.5rem;
+    font-weight: 800;
+    box-sizing: border-box;
+}
+.content{
+    width: 90%;
+    margin: -0.6rem auto;
+    text-align: center;
+    border-radius: 0.0667rem;
+    -webkit-box-shadow: 0rem 0rem 0.2667rem cadetblue;
+            box-shadow: 0rem 0rem 0.2667rem cadetblue;
+    background: #fff;
+}
+.content-rule{
+    text-align: left;
+    margin: 0.4667rem;
+    padding-bottom: 0.5333rem;
+    font-size: 0.35rem;
+    line-height: 0.5rem;
+    color: #bababa;
+}
+.content-rule .item{
+    margin-top: 0.1rem;
+}
+.exchange-icon{
+	width: 0.5rem;
+	margin: 0.2rem;
+}
+.travel-date{
+	display: inline-block;
+	width: 1rem;
+	font-size: .4rem;
+	color: rgba(62,146,222,0.8);
+	margin-top: 0.2rem;
+}
+.label-name{
+	display: inline-block;
+	width: 2rem;
+	font-size: .45rem;
+	padding-top: 0.2rem;
+	color: rgba(62,146,222,0.8);
+}
+.poster{
+    text-align: center;
+    font-size: 0.6rem;
+    line-height: 1rem;
+    font-weight: 800;
+    padding-top: 0.6rem;
+}
+.poster span{
+    font-size: 0.8rem;
+    color: #fcf302;
+    font-style: italic;
+    margin: 0 0.1rem;
+}
+.container .desc{
+    display: inline-block;
+    width: 80%;
+    margin: 0.2rem auto;
+    font-size: 0.32rem;
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.1rem;
+    background: rgba(0 , 0, 0, 0.2);
+}
+.container .desc .yellow{
+    color: #fcf302;
+    font-weight: 800;
+    font-size: 0.35rem;
+}

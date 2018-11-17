@@ -1,0 +1,220 @@
+.avatar{
+    width: 100%;
+    height: 5.8133rem;
+    background: url('https://dimg14.c-ctrip.com/images/100k0g0000007qkp5F0C3_C_500_280.jpg');
+    background-size: 100% 100%;
+    text-align: center;
+}
+.poster{
+    text-align: center;
+    font-size: 0.6rem;
+    line-height: 1rem;
+    font-weight: 800;
+    padding-top: 0.6rem;
+}
+.poster span{
+    font-size: 0.8rem;
+    color: #fcf302;
+    font-style: italic;
+    margin: 0 0.1rem;
+}
+.container .desc{
+    display: inline-block;
+    width: 80%;
+    margin: 0.2rem auto;
+    font-size: 0.32rem;
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.1rem;
+    background: rgba(0 , 0, 0, 0.2);
+}
+.container .desc .yellow{
+    color: #fcf302;
+    font-weight: 800;
+    font-size: 0.35rem;
+}
+.tower{
+    background: #fff8c9;
+    text-align: center;
+}
+.tower-hd{
+    width: 100%;
+}
+.tower-hd img{
+    width: 100%;
+}
+.tower-hd .intro-img{
+    width: 40%;
+    margin-top: -0.1rem;
+}
+.tower-bd__item{
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 0.8rem;
+    background: #fff;
+    border-radius: 0.15rem;
+    box-sizing: border-box;
+    padding: 0 0.4rem;
+    box-shadow: 0 0 10px#fcac11;
+    padding-bottom: 0.5rem;
+}
+.tower-bd__title{
+    display: inline-block;
+    width: 40%;
+    padding: 0.2rem 0;
+    font-size: 0.4667rem;
+    color: #0168ce;
+    font-weight: 800;
+    background: url('../images/title-bg.png');
+    background-size: 100% 100%;
+    margin-top: -1rem;
+}
+.tower-bd__show{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.tower-bd__show img{
+    width: 50%;
+}
+.tower-bd__show .tower-bd__tag{
+    background: #fcac11;
+    color: #fff;
+    margin-top: 0.3rem;
+    padding: 0.1rem 0.8rem 0 0.1rem;
+    border-top-right-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+    text-align: left;
+    font-size: 0.3467rem;
+    line-height: 0.45rem;
+}
+.tower-bd__show1{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: -0.8rem;
+}
+.tower-bd__show1 img{
+    width: 50%;
+}
+.tower-bd__show1 .tower-bd__tag{
+    background: #fcac11;
+    color: #fff;
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
+    padding: 0.1rem 0.1rem 0.1rem 0.8rem;
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+    text-align: right;
+    font-size: 0.3467rem;
+}
+.tower-bd__show2{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.tower-bd__show2 .post{
+    width: 30%;
+    margin-right: 0.1rem;
+}
+.tower-bd__show2 .item1{
+    width: 100%;
+}
+.tower-bd__show2 .item1 img{
+    width: 100%;
+}
+.tower-bd__content{
+    margin-top: 0.4rem;
+    font-size: 0.3733rem;
+    line-height: 0.6667rem;
+    color: #808080;
+    text-align: left;
+}
+.tower-foot{
+    width: 100%;
+    margin-top: 0.5333rem;
+    padding-bottom: 0.533333rem;
+    padding-top: 0.6rem;
+    background: #ffaf16;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    text-align: center;
+}
+.tower-ft__form{
+    width: 92%;
+    position: relative;
+    margin: 0 auto;
+}
+.tower-ft__from-title{
+    color: #ffaf16;
+    font-weight: 800;
+    margin-top: 0.5rem;
+    font-size: 0.6rem;
+    padding: 0.5rem 0 0.3rem 0;
+}
+.tower-ft__form .ticket-form{
+    top: 3rem;
+    width: 100%;
+    background: url('../images/form-bg.png');
+    background-size: 100% 100%;
+    margin-bottom: 0.5rem;
+}
+.tower-ft__from-box{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.45rem;
+    color: #ffaf16;
+}
+#add_box{
+    margin: 0 auto;
+    width: 100%;
+}
+.tower-ft__from-box input{
+    flex: 1;
+}
+.ticket-form input{
+    width: 90%;
+    height: 1.2rem;
+    margin: 0.1667rem;
+    border: none;
+    background: #fffae4;
+    box-sizing: border-box;
+    padding-left: 0.2667rem;
+    font-size: 0.4rem;
+    color: #ffa234;
+}
+.tower-ft__action{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0.2rem;
+    box-sizing: border-box;
+    color: #ff5512;
+    font-size: 0.4rem;
+}
+.tower-ft__action .price{
+    font-size: 0.8rem;
+    font-weight: 800;
+    margin: 0 0.1333rem;
+}
+.tower-ft__action .origion-price{
+    color: #808080;
+    margin: 0 0.2rem;
+    text-decoration: line-through;
+}
+.tower-ft__action #submitBtn{
+    padding: 0.2rem 0.8rem;
+    border-radius: 0.6rem;
+    background: #ff930f;
+    color: #fff;
+    font-size: 0.48rem;
+    font-weight: 800;
+}
+.ticket-form .desc{
+    color: #ffa234;
+    font-size: 0.28rem;
+    padding-bottom: 0.4rem;
+    padding-top: 0.3rem;
+}

@@ -1,0 +1,117 @@
+.container{
+    background: #fada20;
+}
+.avatar{
+    width: 100%;
+    height: 20rem;
+    background: url('../images/tengchong/avatar.png');
+    background-size: 100% 100%;
+}
+.title{
+    height: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    background: url('../images/tengchong/title.png');
+    background-size: 100% 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #04b215;
+    font-size: 0.6rem;
+    font-weight: 800;
+    font-style: italic;
+    margin-bottom: 0.1333rem;
+}
+.date-item{
+    width: 90%;
+    margin: 1.5rem auto;
+    padding: 0.1333rem auto;
+    background: #fffbe0;
+    padding: 0.2rem;
+}
+.date-title{
+    width: 2rem;
+    height: 2rem;
+    border: 0.0267rem solid #04b215;
+    margin: -1rem auto;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    font-size: 0.55rem;
+    font-weight: 800;
+    line-height: 0.6rem;
+    color: #04b215;
+    padding-top: 0.2rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: relative;
+}
+.detail{
+    color: #04b215;
+    font-size: 0.4rem;
+    padding: 0 0.3rem;
+    margin: 0.1rem 0;
+    font-weight: 800;
+}
+.detail .tag{
+    display: inline-block;
+    background: #04b215;
+    color: #fff;
+    padding: 0.02rem 0.2rem;
+    border-bottom-left-radius: 0.35rem;
+    border-top-right-radius: 0.35rem;
+}
+.first{
+    margin-top: 1.2rem;
+}
+.tri-icon{
+    margin-right: 0.1rem;
+    margin-top: 0.1rem;
+}
+.detail-desc{
+    color: #04b215;
+    font-size: 0.37rem;
+    padding: 0 0.2rem 0 0.8rem;
+    margin: 0.1rem 0;
+}
+.notice{
+    width: 90%;
+    margin: 0 auto;
+}
+.notice-title{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #555;
+    font-size: 0.5rem;
+    font-weight: 800;
+    margin: 0.2rem 0;
+}
+.notice-title .icon{
+    margin-right: 0.1rem;
+}
+.notice .desc{
+    color: #555;
+}
+.ft-img{
+       height: 0.3rem;
+       background: url('../images/tengchong/footer.png');
+       background-size: 100% 100%;
+   }
